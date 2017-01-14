@@ -1,0 +1,22 @@
+- A DataFrame can be made of from some series or some dictionaries grouped together.
+- A DataFrame can be visualized as a group of series stacked one on top of the other. The labels in the series 
+make the columns and the data in the series form the rows.
+- The column of a dataframe can be directly accessed by indexing.
+- To reference a particular value in a dataframe we can use the df.loc[row label, column label] or alternatively we can 
+use df.loc[row label][column label]. However please beware that the latter creates a copy of the original 
+df i/o of giving the view of the existing.
+- You can also use df.iloc[0:2,0:1] to access a particular cell or 
+use df.loc[row label 1:row label 3, col label 1: col label 4]
+- Can transpose a dataframe using df.T
+- Dropping of a table can be performed by specifying the axis(0=horizontal, 1=vertical) and a parameter passed to
+determine if a copy is return or the original df is affected. 
+- If using del function to drop a column, the df is directly returned.
+- One must consider using a copy of a dataframe before performing any modification on the dataframe or its 
+derived objects(such as series) as the modification to the derived objects can change the dataframe itself.
+- Broacasting is the term used when a function is applied on series or the dataframe object and the changes are 
+applied to all the values in the dataframe/series.
+- Boolean masking is referred to as representing the values in a dataframe/series as True/False depending on a certain
+condition.
+- Data from a certain dataframe can be selected using the above approach. df[df['Gold']>0] would return a dataframe
+which have values greater than zero under the 'Gold' column.
+- Indexes can be set 
